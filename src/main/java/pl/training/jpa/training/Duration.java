@@ -3,9 +3,7 @@ package pl.training.jpa.training;
 import lombok.*;
 import pl.training.jpa.commons.Identifiable;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @RequiredArgsConstructor
@@ -13,10 +11,13 @@ import javax.persistence.Id;
 @Getter
 @Setter
 @ToString
-public class Tag implements Identifiable<Long> {
+public class Duration implements Identifiable<Long> {
     @Id
     @GeneratedValue
     private Long id;
-    @NonNull
-    private String name;
+    private Integer value;
+    @Enumerated(EnumType.STRING)
+    private DurationUnit unit;
+
+
 }
