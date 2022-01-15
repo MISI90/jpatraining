@@ -6,7 +6,6 @@ import pl.training.jpa.commons.Identifiable;
 import javax.persistence.*;
 
 @Embeddable
-@RequiredArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter

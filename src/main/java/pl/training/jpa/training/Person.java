@@ -8,8 +8,7 @@ import javax.persistence.*;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
-@Entity
-@RequiredArgsConstructor
+@Entity(name = "AUTHOR")
 @NoArgsConstructor
 @Getter
 @Setter

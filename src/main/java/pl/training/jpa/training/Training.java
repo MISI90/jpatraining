@@ -35,8 +35,9 @@ public class Training {
     @Enumerated(EnumType.STRING)
     private Type type;
 
-    @OneToOne
-    @JoinColumn(name = "DURATION_ID")
+    @Embedded
+    @AttributeOverride(name = "unit", column = @Column(name = "duration_unit"))
+    @AttributeOverride(name = "value", column = @Column(name = "duration_value"))
     private Duration duration;
 
     @Enumerated(EnumType.STRING)
